@@ -33,7 +33,7 @@ int main()
 			break;
 		case '2':
 			cout << "Enter string:\n";
-			cin >> input;
+			cin.getline(input, sizeof(char) * 4096);
 			cs->reinitialize(input);
 			break;
 		case '3':
