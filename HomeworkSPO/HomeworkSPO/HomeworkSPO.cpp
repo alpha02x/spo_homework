@@ -12,7 +12,7 @@ int main()
 	
 	char * input = new char;
 	cout << "Enter string:\n";
-	cin >> input;
+	cin.getline(input, sizeof(char) * 4096);
 	auto cs = new ChunkedString(input);
 
 	std::cout << "Select command:\n"
