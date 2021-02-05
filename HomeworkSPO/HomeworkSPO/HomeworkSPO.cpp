@@ -10,7 +10,7 @@ int main()
 {
 	int bi, length = 0;
 	
-	char * input = new char;
+	char * input = new char[4096];
 	cout << "Enter string:\n";
 	cin.getline(input, sizeof(char) * 4096);
 	auto cs = new ChunkedString(input);
@@ -33,6 +33,7 @@ int main()
 			break;
 		case '2':
 			cout << "Enter string:\n";
+			cin.ignore();
 			cin.getline(input, sizeof(char) * 4096);
 			cs->reinitialize(input);
 			break;
